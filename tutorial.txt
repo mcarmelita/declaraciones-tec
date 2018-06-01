@@ -1,0 +1,9 @@
+1.-copiar la carpeta del proyecto a la ruta C:\xampp\htdocs
+2.-crear una base de datos en mysql que se llame declaraciones
+3.-abrir el control panel de xampp e iniciar apache y mysql.
+4.-abrir una consola en la opción shell de xampp.
+5.-ejecutar el comando "cd htdocs/declaraciones" sin comillas.
+6.-ejecutar el comando "php artisan key:generate" sin comillas.
+7.-ejecutar el comando "php artisan migrate:refresh --seed" sin comillas (esto va a crear las tablas en la base de datos creada anteriormente).
+en caso de que esto muestre algun erro me dices 
+8.-ejecutar el comando "php artisan serve" sin comillas (esto pondrá en marcha el servidor para poder acceder en el navegador, escribir la url localhost:8000).

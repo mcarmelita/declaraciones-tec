@@ -1,0 +1,69 @@
+.footer{
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    text-justify: inter-word;
+    line-height: 5px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+}
+.texto{
+	position: relative;
+	top: 15px;
+}
+.menuFondo{
+	background-color: #14335a;
+	position:relative;
+	top: -15px;
+	left: -130px;
+	width: 1368px;
+}
+.font{
+	color: white;
+}
+.btn{
+	position: absolute;
+	left: 50px;
+	background-color: #14335a;
+	color: white;
+}
+.login{
+	position: absolute;
+	top: 150px;
+	left: 250px;
+}
+.panelBody{
+	height: 300px;
+	background-color: #14335a;
+	color: white;	
+	height: 350;
+}
+.panelHead{
+	width: 600px;
+	background-color: #FAFAFA;
+}
+.imgLogin{
+	position: absolute;
+	left: 280px;
+	top:30px;
+	width: 80px;
+	height: 80px;
+}
+.form{
+	position: relative;
+	top: 40px;
+	left: 80px;
+}
+.banner{
+	position: relative;
+	left: 5px;
+}
+.inicio{
+	position: relative;
+	top: 250px;
+	left: 30px;
+	width: 152px;
+	height: 117px;
+}
