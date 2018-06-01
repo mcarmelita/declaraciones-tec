@@ -65,6 +65,6 @@ class User extends Authenticatable
     }
 
     public function documentos(){
-        return $this->hasMany('App\Documento', 'id_documento');
+        return $this->hasMany('App\Documento', 'id_user');
     }
 }

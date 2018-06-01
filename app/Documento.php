@@ -11,6 +11,6 @@ class Documento extends Model
     ];
 
     public function users(){
-    	return $this->belongsTo('App\User', 'user_documento', 'id_user');
+    	return $this->belongsTo('App\User', 'id_user');
     }
 }
