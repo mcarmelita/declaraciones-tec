@@ -31,19 +31,6 @@
 				</div>
 			</div>
 			<div>
-				<label>Area: </label>
-				<div>
-					<select class="letra" id="users" name="users">
-						<option value="">Selecciona una area</option>
-						@foreach($users as $users)
-							<option value="{{ $users->id }}">
-								{{ $users->name }}							
-							</option>
-						@endforeach
-					</select>
-				</div>
-			</div>
-			<div>
 				<label>Periodo: </label>
 				<div>
 					<select class="letra" id="periodo" name="periodo">

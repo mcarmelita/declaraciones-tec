@@ -14,13 +14,13 @@ class DocumentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($user=null)
+    public function index(Documento $documento, Request $request)
     {
-        if ($user == null): 
-            $documentos = Documento::OrderBy('nombre')->get();
-        else:
-            $documentos = Documento::where('id_user', $user)->orderBy('nombre')->get();
-        endif;
+        if ($request->user()->id == 1) {
+            $documentos = Documento::orderBy('nombre')->get();
+        }else{
+            $documentos = Documento::where('id_user', $request->user()->id)->orderBy('nombre')->get();
+        }
 
         return view('documentos.list', compact('documentos'));
     }
@@ -54,7 +54,7 @@ class DocumentoController extends Controller
         Storage::disk('documentos')->put($ruta_archivo, file_get_contents($archivo->getRealPath()));
         $documentos->archivo = $ruta_archivo;
         $documentos->periodo = $request->periodo;
-        $documentos->id_user = $request->users;
+        $documentos->id_user = $request->user()->id;
         $documentos->save();
 
         return redirect()->route('documento.index', compact('documentos', 'areas'));

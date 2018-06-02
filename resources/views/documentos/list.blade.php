@@ -21,7 +21,7 @@
 					@foreach($documentos as $documento)<!--recorre el arreglo que trae todos los documentos y demas información-->
 						<tr>
 							<td><a href=""></a> {{ $documento->num_formato }} </td><!--obtiene los atributos de la columna numformato-->
-							<td> {{$documento->id_user}} </td>
+							<td> {{$documento->users ? $documento->users->name : ''}} </td>
 							<td> {{ $documento->nombre }} </td>
 							<td> {{ $documento->periodo }} </td>
 							<td><a href="/documentos/{{$documento->archivo}}" download> {{ $documento->archivo }} </a></td>
