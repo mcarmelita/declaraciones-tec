@@ -37,7 +37,7 @@
 				          </div>
 				      </li>-->
 				      <li>
-				      	<a class="font nav-link" href="{{ route('documento.index') }}">Documentos</a>
+				      	<a class="font nav-link" href="{{ route('documentos.index') }}">Documentos</a>
 				      </li>
 				      <li class="nav-item dropdown">
 				        <a class=" font nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

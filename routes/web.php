@@ -19,7 +19,6 @@ Auth::routes();
 Route::middleware('auth')->group(function(){
 	Route::view('/', 'home')->name('home');
 
-	Route::resource('documento', 'DocumentoController');
+	Route::resource('documentos', 'DocumentoController');
 	Route::resource('periodos', 'PeriodoController');
-	Route::get('/download/{documento}', 'PeriodoController@download');
 });

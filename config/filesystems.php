@@ -45,7 +45,7 @@ return [
 
         'documentos' => [
             'driver' => 'local',
-            'root' => public_path('documentos'),
+            'root' => public_path('documentos2'),
         ],
 
         'local' => [

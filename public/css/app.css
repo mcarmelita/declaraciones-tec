@@ -1,5 +1,42 @@
+body, html { 
+  margin:0; 
+  padding:0; 
+  height:100%; 
+} 
+.wrapper { 
+  min-height:100%; 
+  position:relative; 
+} 
+.header-zone { 
+  padding:5px; 
+  height: 100px; 
+  display: flex;
+  left: 0px;
+} 
+.middle-zone { 
+  padding-bottom:100px; 
+} 
+.footer-zone { 
+  height: 50px; 
+  background:black; 
+  width:100%; 
+  position:absolute; 
+  bottom:0; 
+  left:0; 
+}
+.banner{
+	position: relative;
+	left: 50px;
+}
+.menuFondo{
+	background-color: #14335a;
+	position:absolute;
+	top: 0px;
+	left: -120px;
+	width: 1368px;
+}
 .footer{
-	position: absolute;
+	position: flex;
     bottom: 0;
     width: 100%;
     height: 60px;
@@ -13,19 +50,12 @@
 	position: relative;
 	top: 15px;
 }
-.menuFondo{
-	background-color: #14335a;
-	position:relative;
-	top: -15px;
-	left: -130px;
-	width: 1368px;
-}
 .font{
 	color: white;
 }
-.btn{
+.btnlog{
 	position: absolute;
-	left: 50px;
+	left: 110px;
 	background-color: #14335a;
 	color: white;
 }
@@ -56,10 +86,6 @@
 	top: 40px;
 	left: 80px;
 }
-.banner{
-	position: relative;
-	left: 5px;
-}
 .inicio{
 	position: relative;
 	top: 250px;
@@ -67,3 +93,24 @@
 	width: 152px;
 	height: 117px;
 }
+input[type="file"]#archivo {
+ width: 0.1px;
+ height: 0.1px;
+ opacity: 0;
+ overflow: hidden;
+ position: absolute;
+ z-index: -1;
+ }
+ label[for="archivo"] {
+ font-size: 14px;
+ font-weight: 600;
+ color: #fff;
+ background-color: #106BA0;
+ display: inline-block;
+ transition: all .5s;
+ cursor: pointer;
+ padding: 15px 40px !important;
+ text-transform: uppercase;
+ width: fit-content;
+ text-align: center;
+ }

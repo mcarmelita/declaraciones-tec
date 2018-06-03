@@ -10,34 +10,46 @@
     <title> @yield('title')</title>
 
     <!-- Styles -->
-    <link type="text/css" href="{{ asset('css/normalize_reset.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="{{ asset('bootstrap-4.1.1-dist/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('bootstrap-4.1.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('css/datatables.min.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('css/normalize_reset.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="body">
-    <div>
-        @include('layouts.header')
-        <div class="container-fluid">
+    <div class="wrapper">
+        <div class="header-zone">
+            @include('layouts.header')
+        </div>
+        <div class="container-fluid middle-zone">
             <div class="row">
                 @include('layouts.menu')
-                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"> 
+                <main role="main" class="col-md-12 ml-sm-auto"> 
                     @yield('content')   
                 </main>
             </div>
         </div>
-        @include('layouts.footer')
+        <div class="footer-zone">
+            @include('layouts.footer')
+        </div>
     </div>
 
     <!-- Scripts -->
-    <script href="https://unpkg.com/popper.js"></script>
-    <script href="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/datatables.min.js') }}"></script>
     <script src=" {{ asset('bootstrap-4.1.1-dist/js/bootstrap.js') }} "></script>
     <script src=" {{ asset('bootstrap-4.1.1-dist/js/bootstrap.min.js') }} "></script>
+    <script href="https://unpkg.com/popper.js"></script>
+    <script href="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+    </script>
 
-    @yield('extra.js')
+    @yield('extra-js')
 </body>
 </html>
